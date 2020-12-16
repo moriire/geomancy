@@ -1,3 +1,3 @@
 # geomancy
 Geomancy Algorith
-[!(https://upload.wikimedia.org/wikipedia/commons/a/ad/Geomantic_housechart.svg)]
+[![(N|solid)(https://upload.wikimedia.org/wikipedia/commons/a/ad/Geomantic_housechart.svg)]
