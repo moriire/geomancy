@@ -1,4 +1,4 @@
 # geomancy
 Geomancy Algorithm
 
-(https://upload.wikimedia.org/wikipedia/commons/a/ad/Geomantic_housechart.svg)]
+[N!geomancy diagram](https://upload.wikimedia.org/wikipedia/commons/a/ad/Geomantic_housechart.svg)
