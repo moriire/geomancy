@@ -1,0 +1,2 @@
+# geomancy
+Geomancy Algorithm
