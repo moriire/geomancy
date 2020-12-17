@@ -44,14 +44,20 @@ class Geo:
 		return  a
 		
 	def daughters(self):
-		"""Combines neighbouring array components"""
+		"""
+		Combines neighbouring array components
+		[(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
+		"""
 		d=self.mothers()
 		s, t, u, v = d
 		d1, d2=map(sum, zip(s,t)), map(sum, zip(u,v))
 		return (i%2 for i in d1), (i%2 for i in d2)
 		
 	def judge(self):
-		"""Combines neighbouring array components"""
+		"""
+		Combines neighbouring array components
+		 [(0, 1, 1, 1), (1, 0, 0, 1)] => (1, 1, 1, 0)
+		"""
 		a, b =map(list, self.daughters())
 		c = map(sum, zip(a,b))
 		return (i%2 for i in c)
