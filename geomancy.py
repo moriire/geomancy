@@ -103,7 +103,7 @@ class Meaning(Geo):
 		return geo
 	
 	def __comp__(self, filia):
-		for (u, v) in self.conv.items:
+		for (u, v) in self.conv.items():
 			if v == filia:
 				return u.replace('_', ' ')
 			
