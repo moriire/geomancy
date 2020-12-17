@@ -59,9 +59,6 @@ class Geo:
 		f5 = f"Judge => {r5}"
 		print(f1, f2, f3, f4, f5, sep="\n")
 
-geo=Geo()	
-geo.mancy()
-
 class Meaning(Geo):
 	def __init__(self):
 		self.geo = Geo()
@@ -92,4 +89,6 @@ class Meaning(Geo):
 				return u.replace('_', ' ')
 			
 	
-			
+if __name__== 'main()':
+	geo=Geo()
+	geo.mancy()
