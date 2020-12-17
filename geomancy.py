@@ -15,14 +15,18 @@ class Geo:
 		return selections
 	
 	def sRes(self, array):
-		"""Converts it to a 4x1 binary array using the remainder of each random selection"""
+		"""
+		Converts it to a binary array using the remainder of each random selection
+		[1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
+		"""
 		return (i%2 for i in array)
 			
 	def __iter__(self):
 		return self.sRes(self.dots())
 	
 	def filia(self, array, n):
-		"""split an array into n components"""
+		"""split an array into n components
+		"""
 		s=[]
 		length=0
 		while length < len(array):
