@@ -63,13 +63,19 @@ class Meaning(Geo):
 		self.conv = dict(puer=(1,1,0,1),
 				 fortuna_major=(0,0,1,1),
 				 acquisitio=(0,1,0,1),
-				 puella=(1,1,1,0),
-				 tristitia=(0,0,1,0),
+				 cauda_draconis = (1,1,1,0),
+				 albus=(0,0,1,0),
+				 puella=(1,0,1,1),
+				 tristitia=(0,0,0,1),
 				 fortuna_minor =(1,1,0,0),
 				 populus=(0,0,0,0),
 				 rubeus=(0,1,0,0),
 				 laetitia=(1,0,0,0),
-				 via=(1,1,1,1)
+				 via=(1,1,1,1),
+				 amisio = (1,0,1,0),
+				 conjunctio = (0,1,1,0),
+				 cancer = (1,0,0,1),
+				 capus_draconis = (0,1,1,1)
 				)
 	
 	def __call__(self):
