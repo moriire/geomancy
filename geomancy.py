@@ -1,7 +1,6 @@
 import random
 class Geo:
-	def __init__(self):
-		self.cache={}
+	self.counter=0
 		
 	def dots(self):
 		selections = []
