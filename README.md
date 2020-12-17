@@ -10,6 +10,14 @@ GEOMANCY is a form of divination based on the interpretation of figures or patte
 from geomancy import Geo
 geo = Geo()
 ```
+```sh
+geo.mancy()
+Random Samples(16)=>[2, 11, 12, 7, 2, 7, 14, 1, 16, 7, 4, 1, 9, 3, 12, 6]
+Cleaned data => [0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1]
+mothers => [[1, 1, 0, 1], [1, 0, 1, 1], [0, 0, 0, 1], [0, 1, 0, 1]]
+daughters => [[0, 1, 0, 1], [1, 0, 0, 0]]
+Judge => [1, 1, 0, 0]
+```
 ## Geo(builtins.object)
 ###  dots()
  ```sh
@@ -18,43 +26,16 @@ geo = Geo()
 ```
 ###  mothers()
  ```sh
- geo.mothers()
+ geo.mothers() #split the array into 4 components
  [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
 ```
 ###  daughters()
  ```sh
- geo.daughters()
+ geo.daughters() ###Combines neighbouring array components into 2
  [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
 ```
-
- 
- |  filia(self, array, n)
- |      split an array into n components
- |  
- |  judge(self)
- |      Combines neighbouring array components
- |       [(0, 1, 1, 1), (1, 0, 0, 1)] => (1, 1, 1, 0)
- |  
- |  mancy(self)
- |  
- |  mothers(self)
- |      split the array into n components
- |      [1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1] => [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)]
- |  
- |  sRes(self, array)
- |      Converts it to a binary array using the remainder of each random selection
- |      [1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  __dict__
- |      dictionary for instance variables (if defined)
- |  
- |  __weakref__
- |      list of weak references to the object (if defined)
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  session = 0
+###  judge()
+ ```sh
+ geo.judge() #Combines neighbouring array components
+  [(0, 1, 1, 1), (1, 0, 0, 1)] => (1, 1, 1, 0)
+```
