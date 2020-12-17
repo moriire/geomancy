@@ -3,6 +3,7 @@ class Geo:
 	self.counter=0
 		
 	def dots(self):
+		"""Generate sixteen(16) random numbers between 1 and 16"""
 		selections = []
 		for i in range(16):
 			x= random.randint(1, 16)
@@ -10,12 +11,14 @@ class Geo:
 		return selections
 	
 	def sRes(self, array):
+		"""Converts it to a 4x1 binary array using the remainder of each random selection"""
 		return (i%2 for i in array)
 			
 	def __iter__(self):
 		return self.sRes(self.dots())
 	
 	def filia(self, array, n):
+		"""split an array into n components"""
 		s=[]
 		length=0
 		while length < len(array):
@@ -25,17 +28,20 @@ class Geo:
 		return s
 
 	def mothers(self):
+		"""split the array into n components"""
 		z=list(self)
 		a=self.filia(z, 4)
 		return  a
 		
 	def daughters(self):
+		"""Combines neighbouring array components"""
 		d=self.mothers()
 		s, t, u, v = d
 		d1, d2=map(sum, zip(s,t)), map(sum, zip(u,v))
 		return (i%2 for i in d1), (i%2 for i in d2)
 		
 	def judge(self):
+		"""Combines neighbouring array components"""
 		a, b =map(list, self.daughters())
 		c = map(sum, zip(a,b))
 		return (i%2 for i in c)
@@ -77,7 +83,7 @@ class Meaning(Geo):
 				 capus_draconis = (0,1,1,1)
 				)
 	
-	def __call__(self):
+	def __str__(self):
 		return geo
 	
 	def __comp__(self, filia):
