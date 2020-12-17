@@ -6,24 +6,28 @@ GEOMANCY is a form of divination based on the interpretation of figures or patte
 
 
 [![(N|solid)](https://images.squarespace-cdn.com/content/v1/5859c8c603596e40874b984a/1578281775652-R7KQDME26QIAPP9IA9CE/ke17ZwdGBToddI8pDm48kB1nek-r9_fKmttojQdT0o1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxkmcCFddqaYICggqibSGl5UuaPblmPWdOXCh0RTRmTcvZAWJrb_MaYEBMvE196V5I/image1.png)]
+```sh
+from geomancy import Geo
+geo = Geo()
+```
+## Geo(builtins.object)
+###  dots()
+ ```sh
+ geo.dots() #Generate sixteen(16) random numbers between 1 and 16
+ [3, 5, 14, 3, 7, 12, 11, 8, 4, 11, 10, 2, 3, 5, 6, 13]
+```
+###  mothers()
+ ```sh
+ geo.mothers()
+ [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
+```
+###  daughters()
+ ```sh
+ geo.daughters()
+ [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
+```
 
-### Geo
-class Geo(builtins.object)
- |  Methods defined here:
- |  
- |  __init__(self)
- |      Initialize self.  See help(type(self)) for accurate signature.
- |  
- |  __iter__(self)
- |  
- |  daughters(self)
- |      Combines neighbouring array components
- |      [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
- |  
- |  dots(self)
- |      Generate sixteen(16) random numbers between 1 and 16
- |      [3, 5, 14, 3, 7, 12, 11, 8, 4, 11, 10, 2, 3, 5, 6, 13]
- |  
+ 
  |  filia(self, array, n)
  |      split an array into n components
  |  
