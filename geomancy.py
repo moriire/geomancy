@@ -56,3 +56,27 @@ class Geo:
 
 geo=Geo()	
 geo.mancy()
+
+class Meaning(Geo):
+	def __init__(self):
+		self.geo = Geo()
+		self.conv = dict(puer=(1,1,0,1),
+				 fortuna_major=(1,1,0,1),
+				 acquisitio=(1,1,0,1),
+				 puella=(1,1,0,1),
+				 tristitia=(1,1,0,1),
+				 fortuna_minor =(1,1,0,1),
+				 populus=(1,1,0,1),
+				 rubeus=(1,1,0,1),
+				 laetitia=(1,1,0,1),
+				 via=(1,1,0,1)
+				)
+	
+	def __call__(self):
+		return geo
+	
+	def __comp__(self, filia):
+		for (u, v) in self.conv.items:
+			if v == filia:
+				return u
+			
