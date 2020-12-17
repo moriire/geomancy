@@ -36,7 +36,9 @@ class Geo:
 		return s
 
 	def mothers(self):
-		"""split the array into n components"""
+		"""split the array into n components
+		[1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1] => [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)]
+		"""
 		z=list(self)
 		a=self.filia(z, 4)
 		return  a
