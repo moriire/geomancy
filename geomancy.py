@@ -61,7 +61,7 @@ class Geo:
 		Combines neighbouring array components
 		Eg. [(0, 1, 1, 1), (1, 0, 0, 1)] => (1, 1, 1, 0)
 		"""
-		a, b =map(list, self.daughters())
+		a, b = map(list, self.daughters())
 		c = map(sum, zip(a,b))
 		return (i%2 for i in c)
 	
@@ -106,6 +106,7 @@ class Meaning(Geo):
 		for (u, v) in self.conv.items():
 			if v == filia:
 				return u.replace('_', ' ')
+
 			
 	
 if __name__== "__main__":
