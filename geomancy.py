@@ -84,7 +84,7 @@ class Meaning(Geo):
 	def __comp__(self, filia):
 		for (u, v) in self.conv.items:
 			if v == filia:
-				return u
+				return u.replace('_', ' ')
 			
 	
 			
