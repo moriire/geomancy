@@ -4,11 +4,11 @@ class Geo:
 	def __init__(self):
 		self.sessionr+=1
 		if self.session > 1:
-			raise Exception("Geomancy for a particular subject must not run twice')
+			raise Exception("Geomancy for a particular subject must not run twice")
 	def dots(self):
 		"""
 		Generate sixteen(16) random numbers between 1 and 16
-		[3, 5, 14, 3, 7, 12, 11, 8, 4, 11, 10, 2, 3, 5, 6, 13]
+		Eg. [3, 5, 14, 3, 7, 12, 11, 8, 4, 11, 10, 2, 3, 5, 6, 13]
 		
 		"""
 		selections = []
@@ -20,7 +20,7 @@ class Geo:
 	def sRes(self, array):
 		"""
 		Converts it to a binary array using the remainder of each random selection
-		[1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
+		Eg. [1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
 		"""
 		return (i%2 for i in array)
 			
@@ -40,7 +40,7 @@ class Geo:
 
 	def mothers(self):
 		"""split the array into n components
-		[1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1] => [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)]
+		Eg. [1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1] => [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)]
 		"""
 		z=list(self)
 		a=self.filia(z, 4)
@@ -49,7 +49,7 @@ class Geo:
 	def daughters(self):
 		"""
 		Combines neighbouring array components
-		[(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
+		Eg. [(1, 1, 0, 1), (1, 0, 1, 0), (0, 1, 0, 0), (1, 1, 0, 1)] => [(0, 1, 1, 1), (1, 0, 0, 1)]
 		"""
 		d=self.mothers()
 		s, t, u, v = d
@@ -59,7 +59,7 @@ class Geo:
 	def judge(self):
 		"""
 		Combines neighbouring array components
-		 [(0, 1, 1, 1), (1, 0, 0, 1)] => (1, 1, 1, 0)
+		Eg. [(0, 1, 1, 1), (1, 0, 0, 1)] => (1, 1, 1, 0)
 		"""
 		a, b =map(list, self.daughters())
 		c = map(sum, zip(a,b))
