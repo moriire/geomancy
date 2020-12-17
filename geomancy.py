@@ -3,7 +3,11 @@ class Geo:
 	self.counter=0
 		
 	def dots(self):
-		"""Generate sixteen(16) random numbers between 1 and 16"""
+		"""
+		Generate sixteen(16) random numbers between 1 and 16
+		[3, 5, 14, 3, 7, 12, 11, 8, 4, 11, 10, 2, 3, 5, 6, 13]
+		
+		"""
 		selections = []
 		for i in range(16):
 			x= random.randint(1, 16)
