@@ -89,6 +89,6 @@ class Meaning(Geo):
 				return u.replace('_', ' ')
 			
 	
-if __name__== 'main()':
+if __name__== '__main__()':
 	geo=Geo()
 	geo.mancy()
