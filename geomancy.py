@@ -1,7 +1,10 @@
 import random
 class Geo:
-	self.counter=0
-		
+	self.session=0
+	def __init__(self):
+		self.sessionr+=1
+		if self.session > 1:
+			raise Exception("Geomancy for a particular subject must not run twice')
 	def dots(self):
 		"""
 		Generate sixteen(16) random numbers between 1 and 16
